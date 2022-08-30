@@ -1,4 +1,5 @@
-﻿/*
+﻿
+/*
  * Opgaver til 2. Semester IT-Arkitetur, C# intro, Lektiecafé
  * OPGAVE SÆT 1
  */
@@ -7,24 +8,24 @@
 //Her i feltet under, tester du din kode. Bare slet "//" foran Console.WriteLine for at prøve din kode af i consolen.
 
 //opgave 1 tests:
-//Console.WriteLine("burde blive 30: " + StorTal(30, 27));
-//Console.WriteLine("burde blive 498: " + StorTal(355, 498));
+//Console.WriteLine("Burde blive 30: " + StorTal(30, 30));
+//Console.WriteLine("Burde blive 498: " + StorTal(355, 498));
 
 //opgave 2 tests:
 //Console.WriteLine("Burde blive 2: " + nummer3(new int[] {1,2,2,3,4}));
 //Console.WriteLine("Burde blive 0: " + nummer3(new int[] { 1, 2 }));
 
 //opgave 3 tests:
-//Console.WriteLine("burde være true: " + vokal("ups"));
-//Console.WriteLine("burde være false: " + vokal("lol"));
+//Console.WriteLine("Burde være true: " + vokal("ups"));
+//Console.WriteLine("Burde være false: " + vokal("lol"));
 
 //opgave 6 tests:
-//Console.WriteLine("burde være 2: " + FireA(new int[] { 2, 2, 2, 2, 2, -2, -2, -2, -2, 0 }));
-//Console.WriteLine("burde være 0: " + FireA(new int[] { 9, 3, 23, 1, 6, -6, -1, -23, -3, -9 }));
+//Console.WriteLine("Burde være 2: " + FireA(new int[] { 2, 2, 2, 2, 2, -2, -2, -2, -2, 0 }));
+//Console.WriteLine("Burde være 0: " + FireA(new int[] { 9, 3, 23, 1, 6, -6, -1, -23, -3, -9 }));
 
 //opgave 7 tests:
-//Console.WriteLine("burde være -1: " + FireA(new int[] { 9, 3, -23, 1, 6, -6, -1, 23, -3, -9 }));
-//Console.WriteLine("burde være 0: " + FireATo(new int[] { 9, 3, 23, 1, 6, -6, -1, -23, -3, -9 }));
+//Console.WriteLine("Burde være -1: " + FireATo(new int[] { 9, 3, -23, 1, 6, -6, -1, 23, -3, -9 }));
+//Console.WriteLine("Burde være 0: " + FireATo(new int[] { 9, 3, 23, 1, 6, -6, -1, -23, -3, -9 }));
 
 
 //Opgave 1
@@ -32,23 +33,24 @@
 //Hvis a = b, returner a
 static int StorTal(int a, int b)
 {
-    //Skriv kode her
+    //Skriv din kode her
     return 123;
 }
 
 
 //Opgave 2
 //Lav en funktion/metode tager et array af integers som input parameter og returnere der 3. tal i arrayet.
-//hvis der ikke er 3 tal i arrayet skal funktionen/metoden returnere 0
+//Hvis der ikke er 3 tal i arrayet skal funktionen/metoden returnere 0
 static int nummer3(int[] arr)
 {
     //skriv koden her
     return 123;
+  
 }
 
 
 //Opgave 3
-//lav en funktion/metode der tager en string som input parameter og returnere en boolean, true eller false.
+//Lav en funktion/metode der tager en string som input parameter og returnerer en boolean, true eller false.
 //Den skal returnere true hvis string'en starter men en vokal, altså a,e,i,o,u eller y, false ved alt andet.
 static bool vokal(string str)
 {
@@ -70,7 +72,7 @@ static bool vokal(string str)
 //Opgave 5
 //Nu udvider vi opgave 4! Ud over 3 tabellen skal skal programmet også kunne fortælle om tallet er med i 2-tabellen.
 //Det vil sige at hvis tallet er med i 2 tabellen og 3 tabellen, fx hvis du skriver 6, skal skal den udskrive "tallet er med i både 2 og 3 tabellen"
-//Hvis tallet kun er med i én af tabellerne skal den også kunne fortælle dig hvilken der er med i.
+//Hvis tallet kun er med i én af tabellerne skal den også kunne fortælle dig hvilken den er med i.
 
 //Igen, skriv koden øverst i filen på første linje før alle funktionerne begynder.
 
@@ -80,7 +82,7 @@ static bool vokal(string str)
 //opgave 6
 //Bussen 4A har 10 stops på sin rute til Viby, ved hvert stop stiger passagere på og af bussen.
 //Du skal finde ud af hvor mange passagere der stadig er på bussen efter sidste stop(de er nok faldet i søvn på vej i skole).
-//Du får et array med 10 tal i, hvert tal er et stop og tallet viser hvor mange passagere bussen har tilføjer/mistet ved stoppet. Bussen starter helt tom.
+//Du får et array med 10 tal i, hvert tal repræsenterer et stop og tallet viser hvor mange passagere bussen har tilføjer/mistet ved stoppet. Bussen starter helt tom.
 //Det vil sige dette array [30,15,5,0,0,-20,10,-15,10,-25] burde returnere 10.
 static int FireA(int[] stops)
 {
@@ -91,11 +93,11 @@ static int FireA(int[] stops)
 
 
 //opgave 7
-//Nu skal vi udvide opgave 6 og tjekke for fejl. Ham der står for at tælle mængden af passagerer der stiger af og på, tæller nogle gange forkert.
-// Kan du se hvad fejlen er i dette array? [10,20,-5,-5,-9,-7,-7,14,8,-8]
+//Nu skal vi udvide opgave 6 og tjekke for fejl. Ham der står for at tælle mængden af passagerer der stiger af og på, tæller nogen gange forkert.
+//Kan du se hvad fejlen er i dette array? [10,20,-5,-5,-9,-7,-7,14,8,-8]
 //På 7. stop stiger der 7 ud, men hvor mange er der så med bussen efter 7. stop? -3? Det er noget sluder.
 //Udvid funktionen til at returnere -1 hvis der er fejl i optælling, lige meget hvor stor fejlen er skal den bare returnere -1.
-//Hvis der ingen fejl er skal de stadig kunne returnere antallet der har glemt at stige af.
+//Hvis der ingen fejl er, skal den stadig kunne returnere antallet der har glemt at stige af efter sidste stop.
 
 
 static int FireATo(int[] stops)
@@ -109,13 +111,15 @@ static int FireATo(int[] stops)
 //Lav et consol program der tager input fra brugeren, dette input er antal øl brugeren gerne vil købe og den billigste pris skal så udskives.
 //Det vil sige input = 12 skal udskrive 150 (120 + 15 + 15) og input = 9 skal udskrive 135 (15 * 9).
 
-//Igen, Skriv din consol øverst i filen, eller virker det nok ikke.
+//Igen, Skriv din consol øverst i filen, ellers virker det nok ikke.
 
 //Opgave 9
-//udvid opgave 8 så brugeren også har muligheden for at købe shots. det vil sige at der skal være 2 inputs (Console.ReadLine())
-//det første input er øl og andet input er shots. 10 shots koster 100 og et enkelt shot koster 12. Den samlede pris skal udskrives.
+//Udvid opgave 8 så brugeren også har muligheden for at købe shots. Det vil sige at der skal være 2 inputs (Console.ReadLine())
+//Det første input er øl og andet input er shots. 10 shots koster 100 og et enkelt shot koster 12. Den samlede pris skal udskrives.
 
 //Skriv koden øverst
+
+
 
 //Opgave 10
 //Hvis du ikke allerede har en github, så gå ind og opret dig. 
